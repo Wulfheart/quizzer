@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('wrong_answer_1');
             $table->string('wrong_answer_2');
             $table->string('wrong_answer_3');
-            $table->foreignUuid('category_id')->constrained('categories');
+            $table->foreignUuid('category_id')->constrained();
             $table->timestamps();
         });
     }
