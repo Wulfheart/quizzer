@@ -15,12 +15,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $users = \App\Models\User::factory(10000)->make();
-
-
-         User::insert($users->toArray());
-
-
+        $this->call([
+           QuestionSeeder::class,
+        ]);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
