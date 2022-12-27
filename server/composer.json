@@ -12,7 +12,6 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.7",
-        "spatie/laravel-data": "^2.2",
         "spatie/laravel-event-sourcing": "^7.3",
         "spatie/laravel-model-states": "^2.4",
         "spatie/laravel-typescript-transformer": "^2.1",

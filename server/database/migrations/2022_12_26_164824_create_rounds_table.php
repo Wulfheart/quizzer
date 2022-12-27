@@ -17,7 +17,9 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->foreignUuid('game_id')->constrained();
             $table->foreignUuid('category_id')->constrained();
-            $table->foreignUuid('first_turn')->constrained('questions');
+            $table->foreignUuid('turn_1_id')->constrained('questions');
+            $table->foreignUuid('turn_2_id')->constrained('questions');
+            $table->foreignUuid('turn_3_id')->constrained('questions');
             $table->timestamps();
         });
     }
