@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rounds', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->foreignUuid('game_id')->constrained();
-            $table->foreignUuid('category_id')->constrained();
-            $table->foreignUuid('first_turn')->constrained('questions');
+        Schema::create('turns', function (Blueprint $table) {
+            $table->id();
+            $table->foreignUuid('question_id')->constrained('questions');
+            $table->integer('question_selected_answer_player_1')->nullable();
+            $table->integer('question_selected_answer_player_2')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rounds');
+        Schema::dropIfExists('turns');
     }
 };
